@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, #365486, #7FC7D9, #7FC7D9, #365486);
+    background-size: 300% 300%;
+    animation: color 12s linear infinite alternate;
+}
+
+.main-container {
+    max-width: 60%;
+    margin: auto; /* Center the container */
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff; /* Add background color for better visibility */
+}
+
+.ins {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ins > div { /* Wrap each label-input pair in a div */
+    display: flex;
+    justify-content: space-between; /* Space between label and input */
+    align-items: center; /* Center align items vertically */
+}
+
+.ins label {
+    flex-basis: 40%; /* Allocate width to label */
+    text-align: right;
+    margin-right: 10px; /* Space between label and input */
+}
+
+.ins input[type="text"],
+.ins input[type="radio"] {
+    flex-basis: 60%; /* Allocate width to input */
+    padding: 5px;
+}
+
+.ins input[type="radio"] {
+    width: auto; /* Prevent radio buttons from stretching */
+}
+
+.overlay-container {
+    width: 40%;
+    height: 100vh;
+    background-color: #DCF2F1;
+    opacity: 0.15;
+    position: fixed;
+    right: -20px;
+    top: 0;
+    bottom: 0;
+    transform: skewX(10deg);
+}
+
+@keyframes color {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}

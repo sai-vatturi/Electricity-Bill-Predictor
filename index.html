@@ -4,13 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electricity Bill Predictor</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Electricity Bill Predictor</h1>
-    <form action="predict" method="post">
-        <label for="units">Enter Units Consumed</label>
-        <input type="number" name="units" id="units" required>
-        <input type="submit" value="Predict">
-    </form>
+    <div class="container">
+        <div class="main-container">
+            <h1>Electricity Bill Predictor</h1>
+            <form action="/submit" class="ins">
+                
+                <div>
+                    <label for="rooms">No of Rooms: </label>
+                    <input type="text" name="rooms">    
+                </div>
+                
+                <div>
+                    <label for="people">No of People: </label>
+                    <input type="text" name="people">    
+                </div>
+                
+                <div>
+                    <label for="house">Area of House: </label>
+                    <input type="text" name="house">
+                </div>
+                
+                <div>
+                    <label for="income">Average Monthly Income: </label>
+                    <input type="text" name="rooms">
+                </div>
+                
+                <div>
+                    <label for="tv">Has TV?</label>
+                    <input type="radio" id="yes" name="tv" value="yes">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" name="tv" value="no">
+                    <label for="no">No</label><br>
+                </div>
+               
+                <div>
+                    <label for="tv">Has AC?</label>
+                    <input type="radio" id="yes" name="ac" value="yes">
+                    <label for="yes">Yes</label><br>
+                    <input type="radio" id="no" name="ac" value="no">
+                    <label for="no">No</label><br>
+                </div>
+                
+
+
+                <button class="btn">Calculate Bill</button>
+            </form>
+            
+        </div>
+        <div class="overlay-container">
+
+        </div>
+       
+        
+    </div>
+    
 </body>
 </html> 
