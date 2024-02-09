@@ -9,6 +9,8 @@ body, html {
 }
 
 .container {
+    display: flex;
+    align-items: center;
     height: 100vh;
     width: 100%;
     background: linear-gradient(45deg, #365486, #7FC7D9, #7FC7D9, #365486);
@@ -17,39 +19,40 @@ body, html {
 }
 
 .main-container {
-    max-width: 60%;
-    margin: auto; /* Center the container */
+    height: 80vh;
+    width: 60%;
+    max-width: 50%;
     padding: 20px;
+    margin-left: 30px;
     border-radius: 10px;
-    background: #fff; /* Add background color for better visibility */
+    background: #fff;
 }
-
 .ins {
     display: flex;
     flex-direction: column;
+    margin-top: 80px;
     gap: 10px;
 }
 
-.ins > div { /* Wrap each label-input pair in a div */
+.ins > div { 
     display: flex;
-    justify-content: space-between; /* Space between label and input */
-    align-items: center; /* Center align items vertically */
+    justify-content: space-around;
+    align-items: center;
 }
 
 .ins label {
-    flex-basis: 40%; /* Allocate width to label */
-    text-align: right;
-    margin-right: 10px; /* Space between label and input */
+    flex-basis: 40%;
+    margin-right: 10px;
 }
 
 .ins input[type="text"],
 .ins input[type="radio"] {
-    flex-basis: 60%; /* Allocate width to input */
+    flex-basis: 60%;
     padding: 5px;
 }
 
 .ins input[type="radio"] {
-    width: auto; /* Prevent radio buttons from stretching */
+    width: auto;
 }
 
 .overlay-container {
