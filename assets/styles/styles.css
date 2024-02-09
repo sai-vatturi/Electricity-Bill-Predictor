@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+
 * {
     padding: 0;
     margin: 0;
@@ -23,15 +26,19 @@ body, html {
     width: 60%;
     max-width: 50%;
     padding: 20px;
-    margin-left: 30px;
+    margin-left: 70px;
     border-radius: 10px;
     background: #fff;
+}
+h1{
+    font-size: 50px;
+    padding-bottom: 30px;
 }
 .ins {
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
-    gap: 10px;
+    font-size: larger;
+    gap: 18px;
 }
 
 .ins > div { 
@@ -45,7 +52,7 @@ body, html {
     margin-right: 10px;
 }
 
-.ins input[type="text"],
+.ins input[type="number"],
 .ins input[type="radio"] {
     flex-basis: 60%;
     padding: 5px;
@@ -54,7 +61,18 @@ body, html {
 .ins input[type="radio"] {
     width: auto;
 }
-
+.btn{
+    height: 40px;
+    width: 230px;
+    background-color: #0F1035;
+    color: #DCF2F1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    border-radius: 15px;
+    text-decoration: none;
+    border: none;
+    box-shadow: 3px 4px 5px #7FC7D9;
+}
 .overlay-container {
     width: 40%;
     height: 100vh;
