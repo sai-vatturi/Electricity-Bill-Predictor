@@ -12,49 +12,54 @@
 <body>
     <div class="container">
         <div class="main-container">
-            <h1>Electricity Bill Predictor</h1>
-            <form action="/submit" class="ins">
+            <div class="heading">
+                <h1>Electricity Bill Predictor</h1>
+            </div>
+            <div class="input-form">
+                <form action="/submit" class="ins">
                 
-                <div>
-                    <label for="rooms">No of Rooms: </label>
-                    <input type="number" name="rooms">    
-                </div>
-                
-                <div>
-                    <label for="people">No of People: </label>
-                    <input type="number" name="people">    
-                </div>
-                
-                <div>
-                    <label for="house">Area of House: </label>
-                    <input type="number" name="house">
-                </div>
-                
-                <div>
-                    <label for="income">Average Monthly Income: </label>
-                    <input type="number" name="rooms">
-                </div>
-                
-                <div>
-                    <label for="tv">Has TV?</label>
-                    <input type="radio" id="yes" name="tv" value="yes">
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" id="no" name="tv" value="no">
-                    <label for="no">No</label><br>
-                </div>
-               
-                <div>
-                    <label for="tv">Has AC?</label>
-                    <input type="radio" id="yes" name="ac" value="yes">
-                    <label for="yes">Yes</label><br>
-                    <input type="radio" id="no" name="ac" value="no">
-                    <label for="no">No</label><br>
-                </div>
-                
-
-                <br>
-                <button class="btn">Calculate Bill</button>
-            </form>
+                    <div>
+                        <label for="rooms">No of Rooms: </label>
+                        <input type="number" name="rooms" placeholder="Enter Value (0-5)">    
+                    </div>
+                    
+                    <div>
+                        <label for="people">No of People: </label>
+                        <input type="number" name="people" placeholder="Enter Value (0-11)">    
+                    </div>
+                    
+                    <div>
+                        <label for="house">Area of House: </label>
+                        <input type="number" name="house"  placeholder="Enter Sq. Feet">
+                    </div>
+                    
+                    <div>
+                        <label for="income">Average Monthly Income: </label>
+                        <input type="number" name="rooms"  placeholder="Enter INR">
+                    </div>
+                    
+                    <div>
+                        <label for="tv">Has TV?</label>
+                        <input type="radio" id="yes" name="tv" value="yes">
+                        <label for="yes">Yes</label><br>
+                        <input type="radio" id="no" name="tv" value="no">
+                        <label for="no">No</label><br>
+                    </div>
+                   
+                    <div>
+                        <label for="tv">Has AC?</label>
+                        <input type="radio" id="yes" name="ac" value="yes">
+                        <label for="yes">Yes</label><br>
+                        <input type="radio" id="no" name="ac" value="no">
+                        <label for="no">No</label><br>
+                    </div>
+                    
+    
+                    <br>
+                    <button class="btn">Calculate Bill</button>
+                </form>
+            </div>
+            
             
         </div>
         <div class="overlay-container">
