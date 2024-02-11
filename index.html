@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electricity Bill Predictor</title>
     <link rel="stylesheet" href="./assets/styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/inputs.css">
 </head>
 <body>
     <div class="container">
@@ -17,48 +15,94 @@
             </div>
             <div class="input-form">
                 <form action="/submit" class="ins">
-                
-                    <div>
-                        <label for="rooms">No of Rooms: </label>
-                        <input type="number" name="rooms" placeholder="Enter Value (0-5)">    
+            
+                    <!-- No of Rooms -->
+                    <div class="input-container">
+                        <div class="label">
+                            No of Rooms:
+                        </div>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="number" name="rooms" required>
+                                <label>No of Rooms</label>
+                                <div class="underline"></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div>
-                        <label for="people">No of People: </label>
-                        <input type="number" name="people" placeholder="Enter Value (0-11)">    
+            
+                    <!-- No of People -->
+                    <div class="input-container">
+                        <div class="label">
+                            No of People:
+                        </div>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="number" name="people" required>
+                                <label>No of People</label>
+                                <div class="underline"></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div>
-                        <label for="house">Area of House: </label>
-                        <input type="number" name="house"  placeholder="Enter Sq. Feet">
+            
+                    <!-- Area of House -->
+                    <div class="input-container">
+                        <div class="label">
+                            Area of House:
+                        </div>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="number" name="house" required>
+                                <label>Area of House</label>
+                                <div class="underline"></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div>
-                        <label for="income">Average Monthly Income: </label>
-                        <input type="number" name="rooms"  placeholder="Enter INR">
+            
+                    <!-- Average Monthly Income -->
+                    <div class="input-container">
+                        <div class="label">
+                            Average Monthly Income:
+                        </div>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="number" name="income" required>
+                                <label>Average Monthly Income</label>
+                                <div class="underline"></div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div>
-                        <label for="tv">Has TV?</label>
-                        <input type="radio" id="yes" name="tv" value="yes">
-                        <label for="yes">Yes</label><br>
-                        <input type="radio" id="no" name="tv" value="no">
-                        <label for="no">No</label><br>
+            
+                    <!-- Has TV -->
+                    <div class="input-container">
+                        <div class="label">
+                            Has TV?
+                        </div>
+                        <div class="radio-btns">
+                            <input type="radio" id="tv-yes" name="tv" value="yes">
+                            <label for="tv-yes">Yes</label><br>
+                            <input type="radio" id="tv-no" name="tv" value="no">
+                            <label for="tv-no">No</label><br>
+                        </div>
                     </div>
-                   
-                    <div>
-                        <label for="tv">Has AC?</label>
-                        <input type="radio" id="yes" name="ac" value="yes">
-                        <label for="yes">Yes</label><br>
-                        <input type="radio" id="no" name="ac" value="no">
-                        <label for="no">No</label><br>
+            
+                    <!-- Has AC -->
+                    <div class="input-container">
+                        <div class="label">
+                            Has AC?
+                        </div>
+                        <div class="radio-btns">
+                            <input type="radio" id="ac-yes" name="ac" value="yes">
+                            <label for="ac-yes">Yes</label><br>
+                            <input type="radio" id="ac-no" name="ac" value="no">
+                            <label for="ac-no">No</label><br>
+                        </div>
                     </div>
-                    
-    
+            
                     <br>
                     <button class="btn">Calculate Bill</button>
                 </form>
             </div>
+            
             
             
         </div>

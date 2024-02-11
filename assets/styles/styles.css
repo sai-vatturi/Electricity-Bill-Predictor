@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;600&family=Poppins:wght@100;400&display=swap');
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    font-family: 'JetBrains Mono', monospace;
-}
 
 .container {
     display: flex;
@@ -29,40 +26,26 @@ body, html {
     /* background: #fff; */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-
 }
-h1{
-    font-size: 50px;
-    padding-bottom: 30px;
-}
-.ins {
-    display: flex;
-    flex-direction: column;
-    font-size: larger;
-    gap: 18px;
+.main-container .heading h1 {
+    font-family: 'JetBrains Mono', monospace;
+    color: #0F1035;
+    text-shadow: 2px 1px 0px #fff;
+    font-size: 55px;
+    padding-left: 40px;
+    position: relative;
 }
 
-.ins > div { 
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.main-container .heading h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    border-left: 6px solid #0F1035;
 }
 
-.ins label {
-    flex-basis: 40%;
-    margin-right: 10px;
-}
-
-.ins input[type="number"],
-.ins input[type="radio"] {
-    flex-basis: 60%;
-    padding: 5px;
-}
-
-.ins input[type="radio"] {
-    width: auto;
-}
 .btn{
     height: 40px;
     width: 230px;

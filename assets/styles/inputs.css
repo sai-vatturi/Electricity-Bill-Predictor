@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;600;700&family=Poppins:wght@100;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(-135deg, #DCF2F1, #7FC7D9);
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+.input-container{
+    display: flex;
+    align-items: flex-end;
+}
+.input-container .label {
+    font-family: 'JetBrains Mono', monospace;
+    color: #11235A;
+    font-weight: 700;
+    margin-right: 10px; /* Adjust the margin */
+    margin-bottom: 1px;
+    text-align: left;
+    white-space: nowrap; /* Prevent the label from breaking to the next line */
+}
+.input-container .radio-btns {
+    display: flex;
+    flex-direction: row;
+    color: #11235A;
+}
+
+.wrapper{
+    width: 100%;
+    background: transparent;
+
+}
+.wrapper .input-data{
+    height: 40px;
+    width: 100%;
+    position: relative;
+    background: none;
+    bottom: 0;
+}
+.wrapper .input-data input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 17px;
+    border-bottom: 1px solid #0F1035;
+    background: transparent;
+}
+.wrapper .input-data input:focus ~ label,
+.wrapper .input-data input:valid ~ label{
+    transform: translate(-20px, -30px);
+    font-size: 10px;
+}
+.wrapper .input-data label{
+    position: absolute;
+    bottom: 3px;
+    left: 20px;
+    color: #11235A;
+    font-weight: 100;
+    font-size: 15px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.wrapper .input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    
+}
+.wrapper .input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #0F1035;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+.wrapper .input-data input:focus ~ .underline:before,
+.wrapper .input-data input:valid ~ .underline:before{
+    transform: scaleX(1);
+}
