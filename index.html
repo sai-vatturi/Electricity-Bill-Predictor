@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/styles/inputs.css">
 </head>
 <body>
-    <div class="container">
+    <div class="container glass">
         <div class="main-container">
             <div class="heading">
                 <h1>Electricity Bill Predictor</h1>
@@ -23,8 +23,8 @@
                         </div>
                         <div class="wrapper">
                             <div class="input-data">
-                                <input type="number" name="rooms" required>
-                                <label>Enter Value (0-5)</label>
+                                <input type="number" name="rooms" id="rooms" required>
+                                <label for="rooms">Enter Value (0-5)</label>
                                 <div class="underline"></div>
                             </div>
                         </div>
@@ -37,8 +37,8 @@
                         </div>
                         <div class="wrapper">
                             <div class="input-data">
-                                <input type="number" name="people" required>
-                                <label>Enter Value (0-11)</label>
+                                <input type="number" name="people" id="people" required>
+                                <label for="people">Enter Value (0-11)</label>
                                 <div class="underline"></div>
                             </div>
                         </div>
@@ -51,8 +51,8 @@
                         </div>
                         <div class="wrapper">
                             <div class="input-data">
-                                <input type="number" name="house" required>
-                                <label>Enter Sq. Feet</label>
+                                <input type="number" name="house" id="house" required>
+                                <label for="house">Enter Sq. Feet</label>
                                 <div class="underline"></div>
                             </div>
                         </div>
@@ -65,35 +65,35 @@
                         </div>
                         <div class="wrapper">
                             <div class="input-data">
-                                <input type="number" name="income" required>
-                                <label>Enter ₹INR</label>
+                                <input type="number" name="income" id="income" required>
+                                <label for="income">Enter ₹INR</label>
                                 <div class="underline"></div>
                             </div>
                         </div>
                     </div>
             
                     <!-- Has TV -->
-                    <div class="input-container">
+                    <div class="input-container rad">
                         <div class="label">
                             Has TV?
                         </div>
                         <div class="radio-btns">
-                            <input type="radio" id="tv-yes" name="tv" value="yes">
+                            <input type="radio" id="tv-yes" name="tv" value="yes" required>
                             <label for="tv-yes">Yes</label><br>
-                            <input type="radio" id="tv-no" name="tv" value="no">
+                            <input type="radio" id="tv-no" name="tv" value="no" required>
                             <label for="tv-no">No</label><br>
                         </div>
                     </div>
             
                     <!-- Has AC -->
-                    <div class="input-container">
+                    <div class="input-container rad">
                         <div class="label">
                             Has AC?
                         </div>
                         <div class="radio-btns">
-                            <input type="radio" id="ac-yes" name="ac" value="yes">
+                            <input type="radio" id="ac-yes" name="ac" value="yes" required>
                             <label for="ac-yes">Yes</label><br>
-                            <input type="radio" id="ac-no" name="ac" value="no">
+                            <input type="radio" id="ac-no" name="ac" value="no" required>
                             <label for="ac-no">No</label><br>
                         </div>
                     </div>

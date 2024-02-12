@@ -16,12 +16,14 @@ body{
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
   }
+  
 .input-container{
     display: flex;
     align-items: flex-end;
     margin-top: 5px;
     margin-bottom: 14px;
 }
+
 .input-container .label {
     font-family: 'JetBrains Mono', monospace;
     color: #11235A;
@@ -32,12 +34,58 @@ input[type=number]::-webkit-inner-spin-button {
     text-align: left;
     white-space: nowrap; /* Prevent the label from breaking to the next line */
 }
+.rad{
+    margin-top: 22px;
+}
 .input-container .radio-btns {
     display: flex;
     flex-direction: row;
     color: #11235A;
-    margin-top: 5px;
-    margin-bottom: 14px;
+    /* margin-top: 5px;
+    margin-bottom: 14px; */
+}
+
+
+.input-container .radio-btns input[type="radio"] {
+    display: none;
+}
+
+.input-container .radio-btns label {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    color: #11235A;
+    pointer-events: fill;
+    padding-left: 15px;
+    padding-right: 50px;
+    display: flex;
+    align-items: center;
+    cursor: pointer; /* Add this line */
+
+}
+
+.input-container .radio-btns label:before {
+    content: "\2610"; /* Unicode symbol for an empty box */
+    height: 20px;
+    width: 20px;
+
+    border-radius: 20%;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.input-container .radio-btns input[type="radio"][value="yes"]:checked + label:before {
+    color: #11235A;
+    content: "\2713"; /* Unicode check mark symbol for "Yes" */
+}
+
+.input-container .radio-btns input[type="radio"][value="no"]:checked + label:before {
+
+    color: #11235A;
+    content: "\2716"; /* Unicode symbol for an X */
 }
 
 .wrapper{
@@ -65,16 +113,17 @@ input[type=number]::-webkit-inner-spin-button {
     transform: translate(-20px, -30px);
     font-size: 10px;
 }
-.wrapper .input-data label{
+.wrapper .input-data label {
     position: absolute;
     bottom: 3px;
     left: 20px;
     color: #11235A;
     font-weight: 100;
     font-size: 15px;
-    pointer-events: none;
     transition: all 0.3s ease;
+    cursor: text;
 }
+
 .wrapper .input-data .underline{
     position: absolute;
     bottom: 0;
