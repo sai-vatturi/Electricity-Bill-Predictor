@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electricity Bill Predictor</title>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+
+    <!-- Add your existing stylesheets here -->
     <link rel="stylesheet" href="./assets/styles/styles.css">
+    <link rel="stylesheet" href="./assets/styles/bg.css">
     <link rel="stylesheet" href="./assets/styles/inputs.css">
 </head>
 <body>
@@ -106,12 +113,57 @@
             
             
         </div>
-        <div class="overlay-container">
+        <!-- <div class="overlay-container">
 
+        </div> -->
+        <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="gradients-container">
+                <div class="g1"></div>
+                <div class="g2"></div>
+                <div class="g3"></div>
+                <div class="g4"></div>
+                <div class="g5"></div>
+                <div class="interactive"></div>
+            </div>
         </div>
-       
         
     </div>
+ 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const interBubble = document.querySelector('.interactive');
+            let curX = 0;
+            let curY = 0;
+            let tgX = 0;
+            let tgY = 0;
+    
+            function move() {
+                curX += (tgX - curX) / 20;
+                curY += (tgY - curY) / 20;
+                interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+                requestAnimationFrame(move);
+            }
+    
+            window.addEventListener('mousemove', (event) => {
+                // Check if the mouse is on the right side of the screen
+                if (event.clientX > window.innerWidth / 2) {
+                    tgX = event.clientX - window.innerWidth / 2;
+                    tgY = event.clientY - window.innerHeight / 2;
+                }
+            });
+    
+            move();
+        });
+    </script>
     
 </body>
-</html> 
+</html>

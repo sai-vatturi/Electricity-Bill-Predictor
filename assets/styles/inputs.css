@@ -29,10 +29,10 @@ input[type=number]::-webkit-inner-spin-button {
     color: #11235A;
     font-size: 20px;
     font-weight: 700;
-    margin-right: 10px; /* Adjust the margin */
+    margin-right: 10px;
     margin-bottom: 1px;
     text-align: left;
-    white-space: nowrap; /* Prevent the label from breaking to the next line */
+    white-space: nowrap; 
 }
 .rad{
     margin-top: 22px;
@@ -41,8 +41,6 @@ input[type=number]::-webkit-inner-spin-button {
     display: flex;
     flex-direction: row;
     color: #11235A;
-    /* margin-top: 5px;
-    margin-bottom: 14px; */
 }
 
 
@@ -60,12 +58,12 @@ input[type=number]::-webkit-inner-spin-button {
     padding-right: 50px;
     display: flex;
     align-items: center;
-    cursor: pointer; /* Add this line */
+    cursor: pointer;
 
 }
 
 .input-container .radio-btns label:before {
-    content: "\2610"; /* Unicode symbol for an empty box */
+    content: "\2610"; 
     height: 20px;
     width: 20px;
 
@@ -79,13 +77,13 @@ input[type=number]::-webkit-inner-spin-button {
 
 .input-container .radio-btns input[type="radio"][value="yes"]:checked + label:before {
     color: #11235A;
-    content: "\2713"; /* Unicode check mark symbol for "Yes" */
+    content: "\2713"; 
 }
 
 .input-container .radio-btns input[type="radio"][value="no"]:checked + label:before {
 
     color: #11235A;
-    content: "\2716"; /* Unicode symbol for an X */
+    content: "\2716"; 
 }
 
 .wrapper{
