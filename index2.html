@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cleaner Bill</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;600&family=Poppins:wght@100;400&display=swap');
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        .main-container{
+            background-color: rgb(0, 104, 104);
+
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            display: flex;
+            flex-direction: row;
+        }
+        .left-container{
+            width: 60vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .right-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40vw;
+            height: 100vh;
+            background-color: rgb(91, 124, 0);
+            
+        }
+        .mini-container{
+            width: 80%;
+            height: 80vh;
+            background-color: blueviolet;
+        }
+        .right-div{
+            width: 350px;
+            height: 300px;
+            border-radius: 15%;
+            background-color: brown;
+            text-align: center;
+        }
+        .heading{
+            height: 15%;
+            background-color: aquamarine;
+            margin-bottom: 5%;
+        }
+        .heading h1{
+            font-family: 'JetBrains Mono', monospace;
+            color: #0F1035;
+            text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.5); 
+        }
+        .input-form{
+            width: 100%;
+            height: 75%;
+            background-color: rgba(176, 190, 185, 0.143);
+        }
+        .input-container{
+            border: 2px solid black;
+            height: 50px;
+            display: flex;
+        }
+        .input-container .radio-btns{
+            display: flex;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <div class="mini-container">
+                <div class="heading">
+                    <h1>Electricity Bill Predictor</h1>
+                </div>
+                <div class="input-form">
+                    <form action="/submit" class="ins">
+                        <!-- No of Rooms -->
+                        <div class="input-container">
+                            <div class="label">
+                                No of Rooms:
+                            </div>
+                            <div class="wrapper">
+                                <div class="input-data">
+                                    <input type="number" name="rooms" id="rooms" required>
+                                    <label for="rooms">Enter Value (0-5)</label>
+                                    <div class="underline"></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- No of People -->
+                        <div class="input-container">
+                            <div class="label">
+                                No of People:
+                            </div>
+                            <div class="wrapper">
+                                <div class="input-data">
+                                    <input type="number" name="people" id="people" required>
+                                    <label for="people">Enter Value (0-11)</label>
+                                    <div class="underline"></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Area of House -->
+                        <div class="input-container">
+                            <div class="label">
+                                Area of House:
+                            </div>
+                            <div class="wrapper">
+                                <div class="input-data">
+                                    <input type="number" name="house" id="house" required>
+                                    <label for="house">Enter Sq. Feet</label>
+                                    <div class="underline"></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Average Monthly Income -->
+                        <div class="input-container">
+                            <div class="label">
+                                Average Monthly Income:
+                            </div>
+                            <div class="wrapper">
+                                <div class="input-data">
+                                    <input type="number" name="income" id="income" required>
+                                    <label for="income">Enter ₹INR</label>
+                                    <div class="underline"></div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <!-- Has TV -->
+                        <div class="input-container rad">
+                            <div class="label">
+                                Has TV?
+                            </div>
+                            <div class="radio-btns">
+                                <input type="radio" id="tv-yes" name="tv" value="yes" required>
+                                <label for="tv-yes">Yes</label><br>
+                                <input type="radio" id="tv-no" name="tv" value="no" required>
+                                <label for="tv-no">No</label><br>
+                            </div>
+                        </div>
+                
+                        <!-- Has AC -->
+                        <div class="input-container rad">
+                            <div class="label">
+                                Has AC?
+                            </div>
+                            <div class="radio-btns">
+                                <input type="radio" id="ac-yes" name="ac" value="yes" required>
+                                <label for="ac-yes">Yes</label><br>
+                                <input type="radio" id="ac-no" name="ac" value="no" required>
+                                <label for="ac-no">No</label><br>
+                            </div>
+                        </div>
+                        <button class="btn">Calculate Bill</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="right-container">
+            <div class="right-div">
+                <h3>Your estimated Electricity Bill is</h3>
+                <h2>Rs. 834</h2>
+                <p>Your power consumption is</p>
+                <p><b>Low - Medium</b></p>
+                <p>Some tips to reduce power usage</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
