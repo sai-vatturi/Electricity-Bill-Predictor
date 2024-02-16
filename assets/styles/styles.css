@@ -60,3 +60,11 @@
     border: none;
     box-shadow: 3px 4px 5px #7FC7D9;
 }
+.output{
+    width: 350px;
+    height: 300px;
+    border-radius: 15%;
+    background-color: brown;
+    text-align: center;
+    z-index: 100;
+}
