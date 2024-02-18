@@ -81,7 +81,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .input-container .radio-btns input[type="radio"][value="no"]:checked + label:before {
-
     color: #11235A;
     content: "\2716"; 
 }
