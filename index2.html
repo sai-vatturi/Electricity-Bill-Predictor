@@ -24,14 +24,16 @@
                             <div class="wrapper">
                                 <div class="input-data">
                                     <label>
-                                        <select>
-                                          <option>1</option>
-                                          <option>2</option>
-                                          <option>3</option>
-                                          <option>4</option>
-                                          <option>5</option>
+                                        <div class="select">
+                                        <select name="rooms" id="rooms">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
                                         </select>
-                                      </label>
+                                    </div>
+                                    </label>
                                 </div>
                             </div>
                         </div>
@@ -44,19 +46,21 @@
                             <div class="wrapper">
                                 <div class="input-data">
                                     <label>
-                                        <select>
-                                          <option>1</option>
-                                          <option>2</option>
-                                          <option>3</option>
-                                          <option>4</option>
-                                          <option>5</option>
-                                          <option>6</option>
-                                          <option>7</option>
-                                          <option>8</option>
-                                          <option>9</option>
-                                          <option>10</option>
-                                          <option>11</option>
+                                        <div class="select">
+                                        <select name="people" id="people">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
                                         </select>
+                                        </div>
                                     </label>
                                 </div>
                             </div>
@@ -128,11 +132,11 @@
         
         <div class="right-container">
             <div class="right-div">
-                <h3>Your estimated Electricity Bill is</h3>
-                <h2>Rs. 834</h2>
+                <p class="title">Your estimated Electricity Bill is</p>
+                <p class="price" id="price">Rs.834</p>
                 <p>Your power consumption is</p>
-                <p><b>Low - Medium</b></p>
-                <p>Some tips to reduce power usage <img src="./assets/material-symbols_info-outline.svg"></p>
+                <p class="priceClass" id="priceClass"><b>Low - Medium</b></p>
+                <p class="tips">Some tips to reduce power usage <img src="./assets/material-symbols_info-outline.svg"></p>
             </div>
         </div>
     </div>

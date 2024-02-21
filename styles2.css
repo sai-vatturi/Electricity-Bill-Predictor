@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;400;600&family=Poppins:wght@100;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;400;600;800&family=Poppins:wght@100;400&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -20,14 +20,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.right-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45vw;
-  height: 100vh;
-  background-color: rgb(91, 124, 0);
-}
+
 .mini-container {
   display: flex;
   flex-direction: column;
@@ -35,13 +28,7 @@ body {
   width: 85%;
   height: 90vh;
 }
-.right-div {
-  width: 350px;
-  height: 300px;
-  border-radius: 15%;
-  background-color: brown;
-  text-align: center;
-}
+
 .heading h1 {
   font-family: "JetBrains Mono", monospace;
   color: #0f1035;
@@ -51,13 +38,10 @@ body {
   border-left: #0f1035 solid 6px;
 }
 .input-form {
-  padding-left: 40px;
-  padding-right: 80px;
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 100%;
   margin-top: auto;
   margin-bottom: 5%;
+  padding-left: 50px;
+  padding-right: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,14 +49,21 @@ body {
 .input-container {
   height: 50px;
   display: flex;
+  margin-bottom: 5px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: #11235a;
   white-space: nowrap; 
+  display: flex;
+  align-items: center;
+}
+.input-container .label {
+  margin-right: 10px;
 }
 .input-container .radio-btns {
   display: flex;
   padding-left: 40px;
+
 }
 .btn {
   height: 40px;
@@ -90,7 +81,6 @@ body {
 input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-/* Remove default focus outline */
 input:focus {
   outline: none;
 }
@@ -103,13 +93,13 @@ input:focus {
   position: relative;
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
+  font-size: 15px;
   color: #11235A;
   pointer-events: fill;
-  padding-left: 15px;
-  padding-right: 50px;
   display: flex;
   align-items: center;
   cursor: pointer;
+  margin-right: 40px;
 
 }
 
@@ -117,9 +107,8 @@ input:focus {
   content: "\2610"; 
   height: 20px;
   width: 20px;
-
+  margin-right: 10px;
   border-radius: 20%;
-  margin-right: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,7 +126,6 @@ input:focus {
 }
 
 /* Number Inputs */
-
 .wrapper{
   width: 100%;
   background: transparent;
@@ -149,23 +137,27 @@ input:focus {
   position: relative;
   background: none;
   bottom: 0;
+  font-family: 'Poppins', sans-serif;
+
 }
 .wrapper .input-data input{
   height: 100%;
   width: 100%;
   border: none;
   font-size: 17px;
-  border-bottom: 1px solid #0F1035;
+  color: #11235a;
   background: transparent;
+  position: absolute;
+  left: 20px;
 }
 .wrapper .input-data input:focus ~ label,
 .wrapper .input-data input:valid ~ label{
-  transform: translate(-20px, -30px);
+  transform: translate(-15px, -25px);
   font-size: 10px;
 }
 .wrapper .input-data label {
   position: absolute;
-  bottom: 3px;
+  bottom: 7px;
   left: 20px;
   color: #11235A;
   font-weight: 200;
@@ -176,9 +168,11 @@ input:focus {
 
 .wrapper .input-data .underline{
   position: absolute;
-  bottom: 0;
-  height: 2px;
+  bottom: 2px;
+  height: 1px;
   width: 100%;
+  border-bottom: 0.5px solid black; 
+
   
 }
 .wrapper .input-data .underline:before{
@@ -194,4 +188,107 @@ input:focus {
 .wrapper .input-data input:focus ~ .underline:before,
 .wrapper .input-data input:valid ~ .underline:before{
   transform: scaleX(1);
+}
+
+/* Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  width:  10em;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0!important;
+  background: #7fc7d9;
+  background-image: none;
+  padding-left: 15px;
+  color: #11235a;
+  cursor: pointer;
+  font-size: 14px; 
+  font-family: 'Poppins', sans-serif;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.select {
+  position: relative;
+  border: 0.8px solid #365486;
+  display: flex;
+  width: 100%;
+  max-width: 1000px; 
+  height: 30px;
+  line-height: 40px; 
+  background: #7fc7d9;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: -3px;
+  right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: #365486;
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+.select:hover::after {
+  color: #7fc7d9;
+}
+
+
+
+
+
+
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: 100vh;
+  background-color: rgb(91, 124, 0);
+}
+.right-div {
+  width: 350px;
+  height: 300px;
+  border-radius: 15%;
+  background-color: brown;
+  margin-top: 10%;
+  text-align: center;
+  padding: 20px;
+  
+}
+
+.right-div p{
+  padding: 0;
+  margin: 0;
+}
+
+.right-div .title{
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  margin-top: 25px;
+}
+.right-div .price{
+  margin-bottom: 10px;
+  font-size: 60px;
+  font-weight: 800;
+}
+.right-div .priceClass{
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 200;
+}
+.right-div .tips{
+  font-weight: 200;
+  font-size: 15px;
 }
