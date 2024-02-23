@@ -22,7 +22,7 @@
                                 No of Rooms:
                             </div>
                             <div class="wrapper">
-                                <div class="input-data">
+                                <div class="input-data" style="top: 5px;">
                                     <label>
                                         <div class="select">
                                         <select name="rooms" id="rooms">
@@ -44,23 +44,23 @@
                                 No of People:
                             </div>
                             <div class="wrapper">
-                                <div class="input-data">
-                                    <label>
-                                        <div class="select">
-                                        <select name="people" id="people">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                        </select>
-                                        </div>
+                                <div class="input-data" style="top: 5px;">
+                                    <label>                                 
+                                            <div class="select">
+                                                <select name="people" id="people">
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    <option value="4">4</option>
+                                                    <option value="5">5</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                    <option value="11">11</option>
+                                                </select>
+                                            </div>
                                     </label>
                                 </div>
                             </div>
@@ -72,7 +72,7 @@
                                 Area of House:
                             </div>
                             <div class="wrapper">
-                                <div class="input-data">
+                                <div class="input-data selector">
                                     <input type="number" name="house" id="house" required>
                                     <label for="house">Enter Sq. Feet</label>
                                     <div class="underline"></div>
@@ -131,14 +131,47 @@
         </div>
         
         <div class="right-container">
-            <div class="right-div">
-                <p class="title">Your estimated Electricity Bill is</p>
-                <p class="price" id="price">Rs.834</p>
-                <p>Your power consumption is</p>
-                <p class="priceClass" id="priceClass"><b>Low - Medium</b></p>
-                <p class="tips">Some tips to reduce power usage <img src="./assets/material-symbols_info-outline.svg"></p>
+            <div class="gradient-bg">
+                <div class="blob blob1"></div>
+                <div class="blob blob2"></div>
+                <div class="interactive-blob"></div> <!-- Blob that follows the mouse -->
             </div>
+            <div class="right-div-container">
+                <div class="right-div">
+                    <p class="title">Your estimated Electricity Bill is</p>
+                    <p class="price" id="price">Rs.834</p>
+                    <p>Your power consumption is</p>
+                    <p class="priceClass" id="priceClass"><b>Low - Medium</b></p>
+                    <p class="tips">Some tips to reduce power usage <img src="./assets/material-symbols_info-outline.svg"></p>
+                </div>
+            </div>
+            
         </div>
     </div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const rightContainer = document.querySelector('.right-container');
+    const interactiveBlob = document.querySelector('.interactive-blob');
+    const blobSize = 100; // Assuming a fixed size for simplicity; adjust as needed
+
+    rightContainer.addEventListener('mousemove', (e) => {
+        const rect = rightContainer.getBoundingClientRect();
+        // Calculate the blob's position, adjusting so the mouse pointer is at its center
+        let x = e.clientX - rect.left - (blobSize / 2); // Adjust based on blob's width
+        let y = e.clientY - rect.top - (blobSize / 2); // Adjust based on blob's height
+
+        // Prevent the blob from moving outside the container
+        x = Math.max(0, Math.min(x, rect.width - blobSize));
+        y = Math.max(0, Math.min(y, rect.height - blobSize));
+
+        // Apply the calculated position
+        interactiveBlob.style.left = `${x}px`;
+        interactiveBlob.style.top = `${y}px`;
+    });
+});
+
+        
+    </script>
+        
 </body>
 </html>

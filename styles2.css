@@ -1,3 +1,13 @@
+:root {
+  --color-bg1: rgb(54, 84, 134);
+  --color-bg2: rgb(127, 199, 217);
+  --blob-color: rgba(54, 84, 134, 0.8); /* Blob color */
+  --circle-size: 50%;
+  --blending: hard-light;
+  --blob-blur: 20px; 
+}
+
+
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;400;600;800&family=Poppins:wght@100;400&display=swap");
 body {
   margin: 0;
@@ -132,6 +142,8 @@ input:focus {
 
 }
 .wrapper .input-data{
+  display: flex;
+  align-items: center;  
   height: 40px;
   width: 100%;
   position: relative;
@@ -191,6 +203,7 @@ input:focus {
 }
 
 /* Select */
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -213,6 +226,12 @@ select::-ms-expand {
   display: none;
 }
 
+.input-data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 .select {
   position: relative;
   border: 0.8px solid #365486;
@@ -242,28 +261,15 @@ select::-ms-expand {
 .select:hover::after {
   color: #7fc7d9;
 }
-
-
-
-
-
-
-.right-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45vw;
-  height: 100vh;
-  background-color: rgb(91, 124, 0);
-}
-.right-div {
+.right-div-container {
   width: 350px;
   height: 300px;
   border-radius: 15%;
-  background-color: brown;
+  background-color: #EEF5FF;
   margin-top: 10%;
   text-align: center;
   padding: 20px;
+  z-index: 1;
   
 }
 
@@ -291,4 +297,58 @@ select::-ms-expand {
 .right-div .tips{
   font-weight: 200;
   font-size: 15px;
+}
+@keyframes moveInCircle {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes moveVertical {
+  0%, 100% { transform: translateY(-50%); }
+  50% { transform: translateY(50%); }
+}
+
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45vw;
+  height: 100vh;
+  position: relative; /* Ensure relative positioning for child absolute elements */
+  overflow: hidden;
+  background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
+}
+
+.blob {
+  position: absolute;
+  background: var(--blob-color);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  mix-blend-mode: var(--blending);
+  filter: blur(var(--blob-blur)); /* Apply blur effect */
+}
+
+.blob1 {
+  animation: moveVertical 20s ease-in-out infinite;
+  top: 20%;
+  background: #365486;
+  left: 30%;
+}
+
+.blob2 {
+  animation: moveInCircle 5s linear infinite;
+  top: 70%;
+  left: 70%;
+}
+
+.interactive-blob {
+  position: absolute;
+  width: 40%;
+  height: 30%;
+  background: var(--blob-color);
+  border-radius: 50%;
+  mix-blend-mode: var(--blending);
+  pointer-events: none; /* Ignore mouse events */
+  filter: blur(var(--blob-blur)); /* Apply blur effect */
 }

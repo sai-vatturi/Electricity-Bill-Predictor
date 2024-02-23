@@ -1,3 +1,12 @@
+:root {
+    --color-bg1: rgb(54, 84, 134);
+    --color-bg2: rgb(127, 199, 217);
+    --blob-color: rgba(54, 84, 134, 0.8); /* Blob color */
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
+
 * {
     padding: 0;
     margin: 0;
