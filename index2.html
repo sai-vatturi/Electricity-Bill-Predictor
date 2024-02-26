@@ -1,177 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electricity Bill Clean Wireframe</title>
-    <link rel="stylesheet" href="./styles2.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Electricity Bill Predictor</title>
+    <link rel="stylesheet" href="./assets/styles/styles2.css">
+    <link rel="stylesheet" href="./assets/styles/bg.css">
+    <link rel="stylesheet" href="./assets/styles/inputs.css">
 </head>
 <body>
-    <div class="main-container">
-        <div class="left-container">
-            <div class="mini-container">
-                <div class="heading">
-                    <h1>Electricity Bill Predictor</h1>
-                </div>
-                
-                <div class="input-form">
-                    <form action="/submit" class="ins">
-                        <!-- No of Rooms -->
-                        <div class="input-container">
-                            <div class="label">
-                                No of Rooms:
-                            </div>
-                            <div class="wrapper">
-                                <div class="input-data" style="top: 5px;">
-                                    <label>
-                                        <div class="select">
-                                        <select name="rooms" id="rooms">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                    </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <!-- No of People -->
-                        <div class="input-container">
-                            <div class="label">
-                                No of People:
-                            </div>
-                            <div class="wrapper">
-                                <div class="input-data" style="top: 5px;">
-                                    <label>                                 
-                                            <div class="select">
-                                                <select name="people" id="people">
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    <option value="4">4</option>
-                                                    <option value="5">5</option>
-                                                    <option value="6">6</option>
-                                                    <option value="7">7</option>
-                                                    <option value="8">8</option>
-                                                    <option value="9">9</option>
-                                                    <option value="10">10</option>
-                                                    <option value="11">11</option>
-                                                </select>
-                                            </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <!-- Area of House -->
-                        <div class="input-container">
-                            <div class="label">
-                                Area of House:
-                            </div>
-                            <div class="wrapper">
-                                <div class="input-data selector">
-                                    <input type="number" name="house" id="house" required>
-                                    <label for="house">Enter Sq. Feet</label>
-                                    <div class="underline"></div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <!-- Average Monthly Income -->
-                        <div class="input-container">
-                            <div class="label">
-                                Average Monthly Income:
-                            </div>
-                            <div class="wrapper">
-                                <div class="input-data">
-                                    <input type="number" name="income" id="income" required>
-                                    <label for="income">Enter ₹INR</label>
-                                    <div class="underline"></div>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <!-- Has TV -->
-                        <div class="input-container rad">
-                            <div class="label">
-                                Has TV?
-                            </div>
-                            <div class="radio-btns">
-                                <input type="radio" id="tv-yes" name="tv" value="yes" required>
-                                <label for="tv-yes">Yes</label><br>
-                                <input type="radio" id="tv-no" name="tv" value="no" required>
-                                <label for="tv-no">No</label><br>
-                            </div>
-                        </div>
-                
-                        <!-- Has AC -->
-                        <div class="input-container rad">
-                            <div class="label">
-                                Has AC?
-                            </div>
-                            <div class="radio-btns">
-                                <input type="radio" id="ac-yes" name="ac" value="yes" required>
-                                <label for="ac-yes">Yes</label><br>
-                                <input type="radio" id="ac-no" name="ac" value="no" required>
-                                <label for="ac-no">No</label><br>
-                            </div>
-                        </div>
-                        <br>
-                        <button class="btn">Calculate Bill</button>
-                    </form>
-                </div>
-
-
-
-
+    <div class="container glass">
+        <div class="main-container">
+            <div class="heading">
+                <h1>Electricity Bill Predictor</h1>
             </div>
-        </div>
-        
-        <div class="right-container">
-            <div class="gradient-bg">
-                <div class="blob blob1"></div>
-                <div class="blob blob2"></div>
-                <div class="interactive-blob"></div> <!-- Blob that follows the mouse -->
-            </div>
-            <div class="right-div-container">
-                <div class="right-div">
-                    <p class="title">Your estimated Electricity Bill is</p>
-                    <p class="price" id="price">Rs.834</p>
-                    <p>Your power consumption is</p>
-                    <p class="priceClass" id="priceClass"><b>Low - Medium</b></p>
-                    <p class="tips">Some tips to reduce power usage <img src="./assets/material-symbols_info-outline.svg"></p>
-                </div>
+            <div class="input-form">
+                <form action="/submit" class="ins">
+            
+                    <!-- No of Rooms -->
+                    <div class="input-container">
+                        <div class="label">
+                            No of Rooms:
+                        </div>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="number" name="rooms" id="rooms" required>
+                                <label for="rooms">Enter Value (0-5)</label>
+                                <div class="underline"></div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- No of People -->
+                    <div class="input-container">
+                        <div class="label">
+                            No of People:
+                        </div>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="number" name="people" id="people" required>
+                                <label for="people">Enter Value (0-11)</label>
+                                <div class="underline"></div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Area of House -->
+                    <div class="input-container">
+                        <div class="label">
+                            Area of House:
+                        </div>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="number" name="house" id="house" required>
+                                <label for="house">Enter Sq. Feet</label>
+                                <div class="underline"></div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Average Monthly Income -->
+                    <div class="input-container">
+                        <div class="label">
+                            Average Monthly Income:
+                        </div>
+                        <div class="wrapper">
+                            <div class="input-data">
+                                <input type="number" name="income" id="income" required>
+                                <label for="income">Enter ₹INR</label>
+                                <div class="underline"></div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Has TV -->
+                    <div class="input-container rad">
+                        <div class="label">
+                            Has TV?
+                        </div>
+                        <div class="radio-btns">
+                            <input type="radio" id="tv-yes" name="tv" value="yes" required>
+                            <label for="tv-yes">Yes</label><br>
+                            <input type="radio" id="tv-no" name="tv" value="no" required>
+                            <label for="tv-no">No</label><br>
+                        </div>
+                    </div>
+            
+                    <!-- Has AC -->
+                    <div class="input-container rad">
+                        <div class="label">
+                            Has AC?
+                        </div>
+                        <div class="radio-btns">
+                            <input type="radio" id="ac-yes" name="ac" value="yes" required>
+                            <label for="ac-yes">Yes</label><br>
+                            <input type="radio" id="ac-no" name="ac" value="no" required>
+                            <label for="ac-no">No</label><br>
+                        </div>
+                    </div>
+            
+                    <br>
+                    <button class="btn">Calculate Bill</button>
+                </form>
             </div>
             
+            
+            
         </div>
+        <!-- <div class="overlay-container">
+
+        </div> -->
+
+        <div class="gradient-bg">
+            
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="gradients-container">
+                <div class="g1"></div>
+                <div class="g2"></div>
+                <div class="g3"></div>
+                <div class="g4"></div>
+                <div class="g5"></div>
+                <div class="interactive"></div>
+            </div>
+        </div>
+        
     </div>
+ 
     <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const rightContainer = document.querySelector('.right-container');
-    const interactiveBlob = document.querySelector('.interactive-blob');
-    const blobSize = 100; // Assuming a fixed size for simplicity; adjust as needed
-
-    rightContainer.addEventListener('mousemove', (e) => {
-        const rect = rightContainer.getBoundingClientRect();
-        // Calculate the blob's position, adjusting so the mouse pointer is at its center
-        let x = e.clientX - rect.left - (blobSize / 2); // Adjust based on blob's width
-        let y = e.clientY - rect.top - (blobSize / 2); // Adjust based on blob's height
-
-        // Prevent the blob from moving outside the container
-        x = Math.max(0, Math.min(x, rect.width - blobSize));
-        y = Math.max(0, Math.min(y, rect.height - blobSize));
-
-        // Apply the calculated position
-        interactiveBlob.style.left = `${x}px`;
-        interactiveBlob.style.top = `${y}px`;
-    });
-});
-
-        
+        document.addEventListener('DOMContentLoaded', () => {
+            const interBubble = document.querySelector('.interactive');
+            let curX = 0;
+            let curY = 0;
+            let tgX = 0;
+            let tgY = 0;
+    
+            function move() {
+                curX += (tgX - curX) / 20;
+                curY += (tgY - curY) / 20;
+                interBubble.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+                requestAnimationFrame(move);
+            }
+    
+            window.addEventListener('mousemove', (event) => {
+                if (event.clientX > window.innerWidth / 2) {
+                    tgX = event.clientX - window.innerWidth / 2;
+                    tgY = event.clientY - window.innerHeight / 2;
+                }
+            });
+    
+            move();
+        });
     </script>
-        
+    
 </body>
 </html>

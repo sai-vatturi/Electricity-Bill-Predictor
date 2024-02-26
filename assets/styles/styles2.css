@@ -1,0 +1,79 @@
+:root {
+    --color-bg1: rgb(54, 84, 134);
+    --color-bg2: rgb(127, 199, 217);
+    --blob-color: rgba(54, 84, 134, 0.8); /* Blob color */
+    --circle-size: 80%;
+    --blending: hard-light;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #365486, #7FC7D9, #7FC7D9, #365486);
+    background-size: 300% 300%;
+    animation: color 12s linear infinite alternate;
+}
+
+.main-container {
+    height: 84vh;
+    width: 50%;
+    max-width: 50%;
+    padding: 20px;
+    margin-left: 40px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.main-container .heading h1 {
+    font-family: 'JetBrains Mono', monospace;
+    color: #0F1035;
+    text-shadow: 3px 2px 0px rgba(255, 255, 255, 0.5); 
+    font-size: 55px;
+    padding-left: 40px;
+    position: relative;
+}
+
+.main-container .heading h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 80%;
+    border-left: 6px solid #0F1035;
+}
+.main-container .input-form{
+    margin-left: 40px;
+    padding-right: 80px;
+}
+.btn{
+    height: 40px;
+    width: 230px;
+    background-color: #0F1035;
+    color: #DCF2F1;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    box-shadow: 3px 4px 5px #7FC7D9;
+}
+.output{
+    width: 350px;
+    height: 300px;
+    border-radius: 15%;
+    background-color: brown;
+    text-align: center;
+    z-index: 100;
+}
